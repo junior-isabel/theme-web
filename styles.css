@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --nav-height: 40px;
+  --footer-height: 80px;
+  --theme-color: #1233ff;
+  --theme-dark-color: #02278b;
+  --theme-light-color: #5688ff;
+  --theme-2-color: #5b128f;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.header, .footer {
+  color: #fff;
+}
+
+.header {
+  height: var(--nav-height);
+  background: var(--theme-dark-color);
+}
+.content {
+  min-height: calc(100vh - calc(var(--nav-height) + var(--footer-height)));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  height: var(--footer-height);
+  background: var(--theme-dark-color);
+}
+
+#todo-list {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+#todo-list li {
+  margin: 0 20px;
+}

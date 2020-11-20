@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --theme-color: #1233ff;
+  --theme-dark-color: #02278b;
+  --theme-light-color: #5688ff;
+  --theme-2-color: #5b128f;
+}
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .card {
+    max-width: 300px;
+    border: 1px solid;
+  }
+  .card figure figcaption {
+    color: var(--theme-2-color);
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+  }
+  .card p {
+    padding: 12px;
+    margin: 20px 0px;
+  }
+   
+  .card.primary-color {
+    color: var(--theme-light-color)
+  }
+  .card.primary-dark-color {
+    color: var(--theme-dark-color);
+  }
+  .card-footer {
+    padding: 8px;
+    background: var(--theme-2-color);
+  }
+  .card .card-footer button {
+    color: inherit;
+    font-size: 20px;
+    padding: 4px 20px;
+    cursor: pointer;
+    border-style: none;
+    outline-style: none;
+  }
