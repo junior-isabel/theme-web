@@ -17,7 +17,6 @@ const todo = [
 
 const ui = document.querySelector('#todo-list')
 
-
 todo.forEach(task => {
   let elm = document.createElement('li')
   const card = elm.appendChild(document.createElement('app-card'))
