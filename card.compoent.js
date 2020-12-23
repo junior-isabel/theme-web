@@ -10,9 +10,7 @@ class Card extends HTMLElement {
     this.card.setAttribute('class', 'card')
     const classList = this.hasAttribute('class') ? this.getAttribute('class').split(' ') : []
 
-    classList.forEach(cl => {
-      this.card.classList.add(cl)
-    })
+    classList.forEach(cl => { this.card.classList.add(cl) })
 
     const figure = this.card.appendChild(document.createElement('figure'))
     this.description = this.card.appendChild(document.createElement('p'))
@@ -35,20 +33,20 @@ class Card extends HTMLElement {
     this.shadowRoot.appendChild(style)
     this.shadowRoot.appendChild(this.card)
   }
-  attributeChangedCallback(name, oldeValue, newVaule) {
+  attributeChangedCallback(name, olderValue, newValue) {
     if (name === 'data-title') {
-      this.figcaption.textContent = newVaule
+      this.figcaption.textContent = newValue
     } else if (name === 'data-description') {
-      this.description.textContent = newVaule
+      this.description.textContent = newValue
     } else if (name === 'class') {
       const classList = this.hasAttribute('class') ? this.getAttribute('class').split(' ') : []
       classList.forEach(cl => {
         this.card.classList.add(cl)
       })
     }else if (name === 'src'){
-      this.img.src = newVaule
+      this.img.src = newValue
     }else if (name === 'data-confirm-text') {
-      this.btnOk.textContent = newVaule
+      this.btnOk.textContent = newValue
     }
   }
   static get observedAttributes() {
